@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenskins-ubuntu1' }
+    agent { label 'node1' }
 
     stages {
         stage ('compile') {
