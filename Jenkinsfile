@@ -22,5 +22,18 @@ pipeline {
                 sh ('cp ./target/addressbook-2.0.war /var/lib/tomcat9/webapps/addressbook.war')
             }
         }
+        stage ('Email') {
+            steps {
+                sh (mail bcc: '', body: 'This is email to test my project', cc: 'kellymah21@gmail.com', from: '', replyTo: '', subject: 'Pipeline as a code test', to: 'stephanenoberts@gmail.com')
+            }
+        }
     }
 }
+
+
+
+
+
+
+
+
